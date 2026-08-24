@@ -20,6 +20,7 @@ non_diegetic_music: A minimal ambient texture at a slow tempo — sustained elec
 
 #### 📌 Details
 
+- **描述:** 排练室里的现代舞者完成转身、横穿、收势。展示 I2VA 核心原则：不重复首帧可见信息，只写动画过程。
 - **Type:** I2VA
 - **Duration:** ~8 seconds
 - **Source:** [Official video guide](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/docs/VIDEO_PROMPT_WRITING_GUIDE_base_en.md) (adapted)
