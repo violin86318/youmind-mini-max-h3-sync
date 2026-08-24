@@ -18,6 +18,7 @@ non_diegetic_music: A sparse, sustained string note at a slow tempo, gradually j
 
 #### 📌 Details
 
+- **描述:** minimaxh3.tv 唯一公开验证的提示词-结果配对：高山湖面日出，薄雾漂移，镜头缓慢推进。极简三句式 T2VA 入门范本。
 - **Type:** T2VA
 - **Duration:** ~6 seconds
 - **Source:** [minimaxh3.tv verified result](https://minimaxh3.tv/zh/blog/minimax-h3-prompt-guide)
