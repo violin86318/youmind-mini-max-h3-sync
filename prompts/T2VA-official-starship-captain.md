@@ -16,7 +16,7 @@ non_diegetic_music: Cinematic space-opera orchestral score, slow tempo, featurin
 
 #### 🎬 示例视频
 
-<video controls muted loop preload="metadata" src="https://huggingface.co/MiniMaxAI/MiniMax-H3/resolve/main/assets/t2va.mp4"></video>
+<video controls muted loop playsinline preload="metadata" poster="assets/posters/t2va-official.jpg" src="assets/videos/t2va-official.mp4"></video>
 
 #### 📌 详情
 
