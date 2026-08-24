@@ -229,6 +229,52 @@ a { color: inherit; }
   padding: 3px 10px;
 }
 
+/* Video media card */
+.nb-media-video { height: 190px; background: #000 !important; position: relative; }
+.nb-media-video video {
+  position: absolute; inset: 0; z-index: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.nb-media-video .nb-media-label {
+  position: absolute; z-index: 2; top: 10px; left: 10px;
+  background: var(--lime);
+  border: 2px solid var(--ink);
+  color: #000; opacity: 1;
+  box-shadow: 2px 2px 0 0 var(--ink);
+}
+
+/* Title chips row */
+.nb-title-chips { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.nb-official-chip {
+  font-size: 0.62rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.04em;
+  background: var(--lime); border: 2px solid var(--ink);
+  padding: 3px 9px;
+}
+.nb-desc {
+  font-size: 0.8rem; color: #4B5563; line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* Detail hero subtitle */
+.nb-detail-sub {
+  position: relative; z-index: 1;
+  color: rgba(255,255,255,0.92);
+  font-size: 0.88rem; font-weight: 600; line-height: 1.6;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.85);
+  max-width: 92%;
+  margin-top: 12px;
+}
+
+/* Video inside article */
+.nb-article video {
+  width: 100%; display: block;
+  background: #000;
+  border: 2px solid var(--ink); box-shadow: var(--shadow);
+  margin: 14px 0 20px;
+  max-height: 480px;
+}
+
 /* Card body */
 .nb-body { display: flex; flex-direction: column; flex: 1; padding: 16px; }
 .nb-title-row {
