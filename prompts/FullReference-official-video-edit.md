@@ -37,7 +37,7 @@ The atmospheric, sustained background music from <Audio 1> is reused as the cont
 
 #### 🎬 示例视频
 
-<video controls muted loop preload="metadata" src="https://huggingface.co/MiniMaxAI/MiniMax-H3/resolve/main/assets/ref2va.mp4"></video>
+<video controls muted loop playsinline preload="metadata" poster="assets/posters/ref2va-official.jpg" src="assets/videos/ref2va-official.mp4"></video>
 
 #### 📌 详情
 
