@@ -14,7 +14,7 @@ For the target video, at 0.00 seconds into the target video, <Picture 1> (from [
 
 #### 🎬 示例视频
 
-<video controls muted loop preload="metadata" src="https://video.twimg.com/amplify_video/2091503577781182464/vid/avc1/320x568/XG01ewHG6ShmI3P0.mp4?tag=29"></video>
+<video controls muted loop playsinline preload="metadata" poster="assets/posters/finger-dance.jpg" src="assets/videos/finger-dance.mp4"></video>
 
 #### 📌 详情
 
