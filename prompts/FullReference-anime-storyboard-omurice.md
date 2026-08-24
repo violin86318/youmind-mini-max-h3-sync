@@ -14,7 +14,7 @@ Use the storyboard @[storyboard ref] as sequential shot guidance, not as a stati
 
 #### 🎬 示例视频
 
-<video controls muted loop preload="metadata" src="https://video.twimg.com/amplify_video/2090968175793913857/vid/avc1/320x358/yXDlYaCQGmwk7uxc.mp4?tag=29"></video>
+<video controls muted loop playsinline preload="metadata" poster="assets/posters/omurice-sb.jpg" src="assets/videos/omurice-sb.mp4"></video>
 
 #### 📌 详情
 
