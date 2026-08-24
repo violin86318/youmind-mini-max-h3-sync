@@ -20,7 +20,7 @@ non_diegetic_music: A gentle, heartwarming acoustic guitar melody plays softly i
 
 #### 🎬 示例视频
 
-<video controls muted loop preload="metadata" src="https://huggingface.co/MiniMaxAI/MiniMax-H3/resolve/main/assets/fl2va.mp4"></video>
+<video controls muted loop playsinline preload="metadata" poster="assets/posters/fl2va-official.jpg" src="assets/videos/fl2va-official.mp4"></video>
 
 #### 📌 详情
 
