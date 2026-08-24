@@ -18,6 +18,7 @@ non_diegetic_music: An energetic but minimalist percussion loop at a moderate te
 
 #### 📌 Details
 
+- **描述:** 跑者从黑暗隧道冲入日光。静态广角等她出隧道后仅向右摇镜一次揭示跑道。展示"运镜只为揭示新信息"的原则。
 - **Type:** T2VA
 - **Duration:** ~10 seconds
 - **Source:** [Official camera movement guide](https://minimaxh3.tv/zh/blog/minimax-h3-prompt-guide) (adapted)
