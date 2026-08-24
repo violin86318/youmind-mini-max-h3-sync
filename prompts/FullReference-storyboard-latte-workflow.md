@@ -23,7 +23,7 @@ She talks while preparing the latte:
 
 #### 🎬 示例视频
 
-<video controls muted loop preload="metadata" src="https://video.twimg.com/amplify_video/2090556650885144576/vid/avc1/320x358/84sXD9mAuBd1jdzk.mp4?tag=29"></video>
+<video controls muted loop playsinline preload="metadata" poster="assets/posters/latte-sb.jpg" src="assets/videos/latte-sb.mp4"></video>
 
 #### 📌 详情
 
