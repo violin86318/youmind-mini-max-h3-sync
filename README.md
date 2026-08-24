@@ -31,8 +31,8 @@ Unlike other models, H3 prompts follow a strict **shooting-script format** with 
 | I2VA | 1 |
 | FL2VA | 1 |
 | L2VA | 1 |
-| Full-Reference | 0 |
-| **Total** | **4** |
+| Full-Reference | 1 |
+| **Total** | **5** |
 
 ---
 
@@ -49,6 +49,19 @@ Unlike other models, H3 prompts follow a strict **shooting-script format** with 
 
 ### L2VA (Last Frame → Video)
 - [Falling Glass](prompts/L2VA-falling-glass.md) — Destruction, close-up
+
+### Full-Reference (Subject/Video/Audio References)
+- [Character Swap V2V](prompts/FullReference-character-swap-v2v.md) — Object replacement, photoreal
+
+---
+
+## 📚 Resources
+
+See [RESOURCES.md](RESOURCES.md) for:
+- Official documentation links
+- Prompt generation tools (H3-Promptor, LM Studio assistant)
+- Community tutorials and Reddit discussions
+- Key format notes
 
 ---
 
@@ -67,15 +80,7 @@ All prompts licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4
 
 ---
 
-## 📚 Resources
-
-- [MiniMax H3 on HuggingFace](https://huggingface.co/MiniMaxAI/MiniMax-H3)
-- [Official Base Prompt Guide](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/docs/VIDEO_PROMPT_WRITING_GUIDE_base_en.md)
-- [Official Reference Video Guide](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/docs/VIDEO_PROMPT_WRITING_GUIDE_ref_en.md)
-
----
-
 ## 📄 License
 
-Prompts: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+Content (prompts): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 Code: [MIT](LICENSE)
