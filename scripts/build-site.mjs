@@ -193,8 +193,8 @@ document.querySelectorAll('.nb-copy-btn').forEach(function(btn){
 function copyAssets() {
   const ASSETS = path.join(ROOT, 'site', 'output', 'assets');
   fs.rmSync(ASSETS, { recursive: true, force: true });
-  // 资源源目录：本地 site/assets（含 videos/posters）
-  const SRC = path.join(ROOT, 'site', 'assets');
+  // 资源源目录：仓库根目录 assets/（与运行时路径一致）
+  const SRC = ROOT;
   if (!fs.existsSync(SRC)) return;
   fs.mkdirSync(path.join(ASSETS, 'videos'), { recursive: true });
   fs.mkdirSync(path.join(ASSETS, 'posters'), { recursive: true });
