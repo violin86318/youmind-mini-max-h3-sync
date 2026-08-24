@@ -1,0 +1,19 @@
+## Content License
+
+All prompts in the `prompts/` directory are licensed under
+[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+Prompts are sourced from:
+- Official MiniMax H3 documentation (MiniMaxAI)
+- Community contributions via GitHub Issues
+
+Attribution is included in each prompt file's frontmatter.
+
+## Code License
+
+Build scripts, site templates, and configuration are licensed under the MIT License.
+See [LICENSE](LICENSE) for details.
+
+## Trademarks
+
+MiniMax H3 is a trademark of MiniMaxAI. This project is not affiliated with or endorsed by MiniMaxAI.
