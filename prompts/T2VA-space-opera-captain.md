@@ -18,6 +18,7 @@ non_diegetic_music: A slow, melancholic synthesizer pad at a low volume, with a 
 
 #### 📌 Details
 
+- **描述:** 太空歌剧场景：女舰长目送最后一支舰队跃迁离开，舰桥震动，镜头推向她在玻璃上的倒影。展示事件顺序与结尾状态的写法。
 - **Type:** T2VA
 - **Duration:** ~12 seconds
 - **Source:** [Official V2 API examples](https://minimaxh3.tv/zh/blog/minimax-h3-prompt-guide) (adapted)
