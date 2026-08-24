@@ -20,6 +20,7 @@ non_diegetic_music: A slow, evolving ambient piece — starting with a single hi
 
 #### 📌 Details
 
+- **描述:** 儿童姿态连续过渡到成年姿态，服装光线随时间演变。10 秒单镜头，展示首尾帧之间时间流逝的插值写法。
 - **Type:** FL2VA
 - **Duration:** 10 seconds
 - **Source:** [Official video guide](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/docs/VIDEO_PROMPT_WRITING_GUIDE_base_en.md) (adapted)
