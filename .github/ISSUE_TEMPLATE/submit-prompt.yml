@@ -1,0 +1,97 @@
+name: 🎬 Submit a Prompt
+description: Share your MiniMax H3 structured prompt
+title: "[Prompt] <Short Title>"
+labels: ["prompt-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎬 Submit Your MiniMax H3 Prompt
+
+        Thank you for contributing! MiniMax H3 uses a structured shooting-script format, not natural language.
+
+        ### ⚠️ Important
+
+        By submitting, you confirm:
+        - You have the right to share this content
+        - You agree to license it under CC BY 4.0
+        - You properly attribute the original author
+
+  - type: input
+    id: title
+    attributes:
+      label: Prompt Title
+      description: A short, descriptive title
+      placeholder: "e.g., Rainy Train Station Goodbye"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Prompt Type
+      description: Which H3 mode does this prompt use?
+      options:
+        - T2VA (Text → Video + Audio)
+        - I2VA (Image + Text → Video + Audio)
+        - FL2VA (First/Last Frame → Video)
+        - L2VA (Last Frame → Video)
+        - Full-Reference (subject/video/audio references)
+    validations:
+      required: true
+
+  - type: textarea
+    id: instruction
+    attributes:
+      label: Instruction (if applicable)
+      description: The reference alignment instruction (for I2VA/FL2VA/L2VA)
+      placeholder: "For the target video, at 0.00 seconds..."
+
+  - type: textarea
+    id: multimodal_description
+    attributes:
+      label: integrated_multimodal_description (or detailed_description)
+      description: The main prompt body with shots, camera motion, dialogue
+      placeholder: "[Shot 1] Live-action, cinematic, ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: soundscape
+    attributes:
+      label: overall_soundscape
+      description: 1-4 sentences of ambient/physical sound
+      placeholder: "Rain falls steadily..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: music
+    attributes:
+      label: non_diegetic_music
+      description: 1-3 sentences of background music (or N/A)
+      placeholder: "Sparse piano notes..."
+    validations:
+      required: true
+
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: Comma-separated (e.g., live-action, cinematic, dialogue, rain)
+      placeholder: "live-action, cinematic, dialogue"
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Source / Attribution
+      description: Where did this prompt come from? (URL or description)
+      placeholder: "Original creation / shared by @user on Reddit"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Any tips, recommended settings, or example outputs
