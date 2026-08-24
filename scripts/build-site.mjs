@@ -32,9 +32,10 @@ function readPrompts() {
     const description = descMatch ? descMatch[1].trim() : '';
     // 官方验证标记
     const official = /官方(可复现)?(验证|仓库)/.test(content) || file.includes('official');
-    // 视频 URL
-    const videoMatch = content.match(/<video[^>]*src="([^"]+)"/);
-    const video = videoMatch ? videoMatch[1] : '';
+    // 视频与封面
+    const videoMatch = content.match(/<video[^>]*src="([^"]+)"[^>]*>/) || content.match(/<video[^>]*>/);
+    const videoSrc = (content.match(/<video[^>]*\ssrc="([^"]+)"/) || [])[1] || '';
+    const videoPoster = (content.match(/<video[^>]*\sposter="([^"]+)"/) || [])[1] || '';
     // 主 prompt 块
     const promptMatch = content.match(/```text\n([\s\S]*?)\n```/);
     const promptText = promptMatch ? promptMatch[1].trim() : '';
@@ -44,7 +45,7 @@ function readPrompts() {
     const technique = techMatch ? techMatch[1].trim() : '';
     const durMatch = content.match(/- \*\*时长:\*\*\s*(.+)/) || content.match(/\*\*Duration:\*\*\s*(.+)/);
     const duration = durMatch ? durMatch[1].trim() : '';
-    return { file, title, type, description, promptText, tags, technique, duration, video, official, content };
+    return { file, title, type, description, promptText, tags, technique, duration, video: videoSrc, videoPoster, official, content };
   }).sort((a, b) => (b.official - a.official)); // 官方案例排前
 }
 
@@ -59,8 +60,9 @@ function renderCard(p) {
 
   let media;
   if (p.video) {
+    const posterAttr = p.videoPoster ? ` poster="${p.videoPoster}"` : '';
     media = `<a class="nb-media nb-media-video" href="${href}" style="background:${meta.grad}">
-      <video muted loop autoplay playsinline preload="metadata" src="${p.video}"></video>
+      <video muted loop autoplay playsinline preload="metadata"${posterAttr} src="${p.video}"></video>
       <span class="nb-media-label">${p.official ? '✅ 官方验证' : meta.label}</span>
     </a>`;
   } else {
@@ -157,7 +159,7 @@ function renderDetail(p) {
     <p class="nb-detail-sub">${escapeHtml(p.description.slice(0, 120))}</p>
   </header>
   <article class="nb-article">
-${markdownToHtml(p.content)}
+${markdownToHtml(p.content).replace(/(src|poster)="assets\//g, '$1="../assets/')}
   </article>
   <div class="nb-detail-actions">
     <button class="nb-btn-primary nb-copy-btn" data-prompt-id="prompt-${p.file}">
@@ -188,10 +190,28 @@ document.querySelectorAll('.nb-copy-btn').forEach(function(btn){
 </html>`;
 }
 
+function copyAssets() {
+  const ASSETS = path.join(ROOT, 'site', 'output', 'assets');
+  fs.rmSync(ASSETS, { recursive: true, force: true });
+  // 资源源目录：本地 site/assets（含 videos/posters）
+  const SRC = path.join(ROOT, 'site', 'assets');
+  if (!fs.existsSync(SRC)) return;
+  fs.mkdirSync(path.join(ASSETS, 'videos'), { recursive: true });
+  fs.mkdirSync(path.join(ASSETS, 'posters'), { recursive: true });
+  for (const dir of ['videos', 'posters']) {
+    const d = path.join(SRC, dir);
+    if (!fs.existsSync(d)) continue;
+    for (const f of fs.readdirSync(d)) {
+      fs.copyFileSync(path.join(d, f), path.join(ASSETS, dir, f));
+    }
+  }
+}
+
 function buildSite() {
   const prompts = readPrompts();
   fs.mkdirSync(path.join(OUTPUT_DIR, 'prompts'), { recursive: true });
   fs.copyFileSync(path.join(ROOT, 'site', 'styles.css'), path.join(OUTPUT_DIR, 'styles.css'));
+  copyAssets();
 
   prompts.forEach(p => {
     fs.writeFileSync(path.join(OUTPUT_DIR, 'prompts', p.file.replace('.md', '.html')), renderDetail(p));
