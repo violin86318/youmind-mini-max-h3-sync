@@ -118,7 +118,7 @@ resolves at 15.000 seconds.
 
 #### 🎬 示例视频
 
-<video controls muted loop preload="metadata" src="https://video.twimg.com/amplify_video/2090304831605137408/vid/avc1/480x270/czLrpxrmcloHduUV.mp4?tag=29"></video>
+<video controls muted loop playsinline preload="metadata" poster="assets/posters/retsu-cm.jpg" src="assets/videos/retsu-cm.mp4"></video>
 
 #### 📌 详情
 
