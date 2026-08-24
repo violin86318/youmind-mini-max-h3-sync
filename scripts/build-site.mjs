@@ -199,7 +199,7 @@ function copyAssets() {
   fs.mkdirSync(path.join(ASSETS, 'videos'), { recursive: true });
   fs.mkdirSync(path.join(ASSETS, 'posters'), { recursive: true });
   for (const dir of ['videos', 'posters']) {
-    const d = path.join(SRC, dir);
+    const d = path.join(SRC, 'assets', dir);
     if (!fs.existsSync(d)) continue;
     for (const f of fs.readdirSync(d)) {
       fs.copyFileSync(path.join(d, f), path.join(ASSETS, dir, f));
