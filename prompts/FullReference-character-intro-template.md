@@ -37,7 +37,7 @@ Place the character in a fitting environment that supports their identity and mo
 
 #### 🎬 示例视频
 
-<video controls muted loop preload="metadata" src="https://video.twimg.com/amplify_video/2086412141729402880/vid/avc1/320x338/ajKHgBmnWb9ts_fl.mp4?tag=29"></video>
+<video controls muted loop playsinline preload="metadata" poster="assets/posters/char-intro.jpg" src="assets/videos/char-intro.mp4"></video>
 
 #### 📌 详情
 
